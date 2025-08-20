@@ -64,6 +64,59 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<!-- Google Fonts -->
+  	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background: linear-gradient(135deg, #f8f4f0, #fff);
+			font-family: 'Open Sans', sans-serif;
+			color: #333;
+		}
+
+		.form-wrapper {
+			max-width: 800px;
+			margin: 50px auto;
+			padding: 30px;
+			background-color: #ffffffcc;
+			border-radius: 15px;
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(5px);
+		}
+
+		.form-title {
+			font-family: 'Playfair Display', serif;
+			text-align: center;
+			font-size: 2.5em;
+			color: #5a4e4d;
+			margin-bottom: 30px;
+		}
+
+		.form-frame {
+			width: 100%;
+			height: 700px;
+			border: none;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+
+		@media (max-width: 768px) {
+			.form-wrapper {
+				margin: 20px;
+				padding: 20px;
+			}
+
+			.form-title {
+				font-size: 1.8em;
+			}
+
+			.form-frame {
+				height: 800px;
+			}
+		}
+  </style>
 	</head>
 	<body>
 		
@@ -332,79 +385,79 @@
 						
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-1.jpg); "> 
 						<a href="images/gallery-1.jpg">
-							<div class="case-studies-summary">
+							<!-- <div class="case-studies-summary">
 								<span>14 Photos</span>
 								<h2>Two Glas of Juice</h2>
-							</div>
+							</div> -->
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-2.jpg); ">
 						<a href="#" class="color-2">
-							<div class="case-studies-summary">
+							<!-- <div class="case-studies-summary">
 								<span>30 Photos</span>
 								<h2>Timer starts now!</h2>
-							</div>
+							</div> -->
 						</a>
 					</li>
 
 
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-3.jpg); ">
 						<a href="#" class="color-3">
-							<div class="case-studies-summary">
+							<!-- <div class="case-studies-summary">
 								<span>90 Photos</span>
 								<h2>Beautiful sunset</h2>
-							</div>
+							</div> -->
 						</a>
 					</li>
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-4.jpg); ">
 						<a href="#" class="color-4">
-							<div class="case-studies-summary">
+							<!-- <div class="case-studies-summary">
 								<span>12 Photos</span>
 								<h2>Company's Conference Room</h2>
-							</div>
+							</div> -->
 						</a>
 					</li>
 
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-5.jpg); ">
 							<a href="#" class="color-3">
-								<div class="case-studies-summary">
+								<!-- <div class="case-studies-summary">
 									<span>50 Photos</span>
 									<h2>Useful baskets</h2>
-								</div>
+								</div> -->
 							</a>
 						</li>
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-6.jpg); ">
 							<a href="#" class="color-4">
-								<div class="case-studies-summary">
+								<!-- <div class="case-studies-summary">
 									<span>45 Photos</span>
 									<h2>Skater man in the road</h2>
-								</div>
+								</div> -->
 							</a>
 						</li>
 
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-7.jpg); ">
 							<a href="#" class="color-4">
-								<div class="case-studies-summary">
+								<!-- <div class="case-studies-summary">
 									<span>35 Photos</span>
 									<h2>Two Glas of Juice</h2>
-								</div>
+								</div> -->
 							</a>
 						</li>
 
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-8.jpg); "> 
 							<a href="#" class="color-5">
-								<div class="case-studies-summary">
+								<!-- <div class="case-studies-summary">
 									<span>90 Photos</span>
 									<h2>Timer starts now!</h2>
-								</div>
+								</div> -->
 							</a>
 						</li>
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-9.jpg); ">
 							<a href="#" class="color-6">
-								<div class="case-studies-summary">
+								<!-- <div class="case-studies-summary">
 									<span>56 Photos</span>
 									<h2>Beautiful sunset</h2>
-								</div>
+								</div> -->
 							</a>
 						</li>
 					</ul>		
@@ -528,7 +581,13 @@
 	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
-			<div class="row animate-box">
+			<div class="form-wrapper">
+				<div class="form-title">Formulaire d'inscription</div>
+				<iframe class="form-frame"
+				src="https://docs.google.com/forms/d/e/1FAIpQLScu-X8MF9fHj0yFJXMXiyWSPcAsMC8VCbLNWiB2MrFJVqjl8Q/viewform?embedded=true"
+				allowfullscreen>Chargement…</iframe>
+			</div>
+			<!-- <div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Are You Attending?</h2>
 					<p>Please Fill-up the form to notify you that you're attending. Thanks.</p>
@@ -554,7 +613,7 @@
 						</div>
 					</form>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 
