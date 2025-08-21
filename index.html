@@ -138,6 +138,110 @@
 			background-color: #b14f6a;
 		}
 
+		@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap');
+
+		:root{
+		--rose: #c85c7f;
+		--rose-30: rgba(200,92,127,.30);
+		--ink: #2b2a2a;
+		--muted: #6f6c6c;
+		--ivory-1: #fffefe;
+		--ivory-2: #fbf8f8;
+		}
+
+		/* défilement doux pour les ancres */
+		html { scroll-behavior: smooth; }
+
+		.wed-memory{
+		position: relative;
+		background:
+			radial-gradient(80rem 40rem at 80% -10%, #f7e9ef 0%, transparent 60%),
+			radial-gradient(60rem 30rem at -10% 90%, #f3f7fb 0%, transparent 55%),
+			linear-gradient(180deg, var(--ivory-1), var(--ivory-2));
+		color: var(--ink);
+		}
+
+		.wed-memory__inner{
+		max-width: 840px;
+		margin: 0 auto;
+		padding: clamp(72px, 10vw, 140px) 24px;
+		text-align: center;
+		}
+
+		/* petite étiquette */
+		.wed-memory__eyebrow{
+		font: 500 .78rem/1.2 Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+		letter-spacing: .28em;
+		text-transform: uppercase;
+		color: var(--muted);
+		margin: 0 0 10px;
+		}
+
+		/* titre principal */
+		.wed-memory__title{
+		font-family: "Playfair Display", serif;
+		font-weight: 600;
+		font-size: clamp(28px, 5vw, 46px);
+		line-height: 1.18;
+		margin: 0;
+		}
+
+		/* fine séparation avec cœur discret */
+		.wed-memory__divider{
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		gap: 16px;
+		margin: 18px 0 16px;
+		}
+		.wed-memory__divider::before,
+		.wed-memory__divider::after{
+		content:"";
+		display:block;
+		width: min(120px, 22vw);
+		height: 1px;
+		background: linear-gradient(90deg, transparent, var(--rose-30), transparent);
+		}
+		.wed-memory__divider .heart{
+		font-size: 14px;
+		color: var(--rose);
+		line-height: 1;
+		}
+
+		/* texte d'intro */
+		.wed-memory__lead{
+		font: 400 clamp(15px, 2.3vw, 18px)/1.7 Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+		color: var(--muted);
+		margin: 0 auto 22px;
+		max-width: 46ch;
+		}
+
+		/* bouton pilule, sobre */
+		.wed-memory__btn{
+		display: inline-block;
+		padding: 12px 26px;
+		border-radius: 999px;
+		border: 1px solid var(--rose);
+		color: var(--rose);
+		background: transparent;
+		font: 500 1rem/1 Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+		text-decoration: none;
+		transition: transform .15s ease, background-color .2s ease, color .2s ease, box-shadow .2s ease;
+		box-shadow: 0 6px 18px rgba(200,92,127,.08);
+		}
+		.wed-memory__btn:hover{
+		background: var(--rose);
+		color: #fff;
+		transform: translateY(-1px);
+		box-shadow: 0 10px 24px rgba(200,92,127,.18);
+		}
+		.wed-memory__btn:active{
+		transform: translateY(0);
+		}
+
+		/* animation d'entrée très douce */
+		.reveal{ opacity: 0; transform: translateY(10px); transition: opacity .6s ease, transform .6s ease; }
+		.reveal.show{ opacity: 1; transform: none; }
   </style>
 	</head>
 	<body>
@@ -149,7 +253,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-2">
-					<div id="fh5co-logo"><a href="index.html">D & C<strong>.</strong></a></div>
+					<div id="fh5co-logo" style="width: 150px;"><a href="index.html">D & C<strong>.</strong></a></div>
 				</div>
 				<div class="col-xs-10 text-right menu-1">
 					<ul>
@@ -190,7 +294,7 @@
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h2>Mariage de </h2>
 							<h1>Derick &amp; Camélia</h1>
-							<p>21 septembre 2025</p>
+							<p style="color: #fff;">21 septembre 2025</p>
 							<!-- <div class="simply-countdown simply-countdown-one"></div> -->
 							<!-- <p><a href="#" class="btn btn-default btn-sm">Save the date</a></p> -->
 						</div>
@@ -302,7 +406,7 @@
 						<div class="col-md-10 col-md-offset-1">
 							<div class="col-md-6 col-sm-6 text-center">
 								<div class="event-wrap animate-box">
-									<h3>Main Ceremony</h3>
+									<h3> Cérémonie civile & Bénédiction</h3>
 									<div class="event-col">
 										<i class="icon-clock"></i>
 										<span>4:00 PM</span>
@@ -318,7 +422,7 @@
 							</div>
 							<div class="col-md-6 col-sm-6 text-center">
 								<div class="event-wrap animate-box">
-									<h3>Wedding Party</h3>
+									<h3>Séance photo</h3>
 									<div class="event-col">
 										<i class="icon-clock"></i>
 										<span>7:00 PM</span>
@@ -397,11 +501,25 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<span>Our Memories</span>
-					
-					<p>Un moment inoubliable à partager</p>
-					<button onclick="goToGallery()">Voir la galerie</button>
+					<!-- SECTION MARIAGE — Memories (à coller dans le <body>) -->
+					<section class="wed-memory" id="memories">
+						<div class="wed-memory__inner reveal">
+							<p class="wed-memory__eyebrow">Our Memories</p>
+							<h2 class="wed-memory__title">Un moment inoubliable à partager</h2>
 
+							<div class="wed-memory__divider" aria-hidden="true">
+							<span class="heart" aria-hidden="true">♥</span>
+							</div>
+
+							<p class="wed-memory__lead">
+							Feuilletez notre galerie et revivez les instants précieux de cette journée.
+							</p>
+
+							<a class="wed-memory__btn" href="#galerie" aria-label="Voir la galerie de photos">
+							Voir la galerie
+							</a>
+						</div>
+					</section>
 				</div>
 			</div>
 			<!-- <div class="row row-bottom-padded-md">
@@ -713,9 +831,20 @@
     });
 
 	
-	function goToGallery() {
-		window.location.href = "gallery.html"; // Change le nom si nécessaire
-	}
+	// Apparition en douceur au scroll (simple & propre)
+	(function () {
+	const el = document.querySelector('#memories .reveal');
+	if (!el) return;
+	const io = new IntersectionObserver((entries) => {
+		entries.forEach((x) => {
+		if (x.isIntersecting) {
+			x.target.classList.add('show');
+			io.disconnect();
+		}
+		});
+	}, { threshold: 0.2 });
+	io.observe(el);
+	})();
 
 </script>
 
