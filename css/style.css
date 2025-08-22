@@ -1181,8 +1181,8 @@ form label {
   font-size: 60px;
   margin-bottom: 10px;
   line-height: 1.5;
-  font-weight: bold;
-  color: #F14E95;
+  /* font-weight: bold; */
+  color: #d4a372;
   font-family: "Sacramento", Arial, serif;
 }
 @media screen and (max-width: 768px) {
@@ -1842,3 +1842,10 @@ form label {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/***** FOOTER *****/
+.block-d-et-c{
+	font-size: 50px;
+	font-family: "Sacramento", Arial, serif;
+	color: #d4a372;
+}
