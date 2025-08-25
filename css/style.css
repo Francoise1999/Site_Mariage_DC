@@ -1550,6 +1550,7 @@ form label {
   height: 25px;
   cursor: pointer;
   text-decoration: none;
+  position: fixed!important;
 }
 .fh5co-nav-toggle.active i::before, .fh5co-nav-toggle.active i::after {
   background: #444;
